@@ -20,5 +20,5 @@ from bot.views import test_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^test/$', test_view, name='test')
+    url(r'^messages/$', test_view, name='test')
 ]
