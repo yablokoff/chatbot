@@ -43,6 +43,7 @@ def test_view(request):
         for i in best_responses_indexes[:10]:
             best_responses.append(texts[i])
 
-        return HttpResponse(json.dumps(best_responses), 'application/json', 200)
+        return HttpResponse(json.dumps({"responses": best_responses}), 'application/json', 200)
+        # return HttpResponse(json.dumps({"responses": "hello"}), 'application/json', 200)
     else:
         return Http404
